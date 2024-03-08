@@ -1,0 +1,8 @@
+---
+
+detectors:
+  IrresponsibleModule:
+    enabled: false
+
+exclude_paths:
+  - spec/support/helpers

@@ -1,0 +1,137 @@
+---
+
+require:
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  TargetRubyVersion: 2.5
+  SuggestExtensions: false
+  NewCops: enable
+
+# Metrics ---------------------------------------------------------------------
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+# Naming ----------------------------------------------------------------------
+
+Naming/VariableNumber:
+  Enabled: false
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: false
+
+Naming/InclusiveLanguage:
+  Enabled: false
+
+# Style -----------------------------------------------------------------------
+
+Style/Documentation:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/EmptyCaseCondition:
+  Enabled: false
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false
+
+Style/RedundantConstantBase:
+  Enabled: false
+
+# Layout ----------------------------------------------------------------------
+
+Layout/LineLength:
+  Max: 150
+
+Layout/ClassStructure:
+  Enabled: true
+  Categories:
+    module_inclusion:
+      - include
+      - prepend
+      - extend
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - public_class_methods
+    - initializer
+    - public_methods
+    - protected_methods
+    - private_methods
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+# Lint ------------------------------------------------------------------------
+
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: false
+
+# Gemspec ---------------------------------------------------------------------
+
+Gemspec/RequireMFA:
+  Enabled: false
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
+# Performance -----------------------------------------------------------------
+
+Performance/MethodObjectAsBlock:
+  Enabled: false
+
+# RSpec -----------------------------------------------------------------------
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MessageChain:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleDescribes:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/StubbedMock:
+  Enabled: false
+
+RSpec/VerifiedDoubleReference:
+  Enabled: false
