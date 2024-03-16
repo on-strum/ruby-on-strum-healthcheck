@@ -6,4 +6,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- First release of `on_strum-gem_name`.
+- First release of `on_strum-healthcheck`.

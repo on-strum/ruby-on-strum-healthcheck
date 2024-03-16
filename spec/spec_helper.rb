@@ -3,7 +3,7 @@
 rspec_custom = ::File.join(::File.dirname(__FILE__), 'support/**/*.rb')
 ::Dir[::File.expand_path(rspec_custom)].sort.each { |file| require file unless file[/\A.+_spec\.rb\z/] }
 
-require_relative '../lib/on_strum/gem_name'
+require_relative '../lib/on_strum/healthcheck'
 
 RSpec.configure do |config|
   config.expect_with(:rspec) do |expectations|

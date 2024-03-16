@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require_relative 'lib/on_strum/logs/version'
+require_relative 'lib/on_strum/healthcheck/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'on_strum-gem_name'
-  spec.version       = OnStrum::GemName::VERSION
+  spec.name          = 'on_strum-healthcheck'
+  spec.version       = OnStrum::Healthcheck::VERSION
   spec.authors       = ['Vladislav Trotsenko']
   spec.email         = %w[admin@on-strum.org]
-  spec.summary       = %(on_strum-gem_name)
-  spec.description   = %(on_strum-gem_name description)
-  spec.homepage      = 'https://github.com/on-strum/ruby-on-strum-gem-name'
+  spec.summary       = %(Simple configurable rack middleware)
+  spec.description   = %(Simple configurable rack middleware.)
+  spec.homepage      = 'https://github.com/on-strum/ruby-on-strum-healthcheck'
   spec.license       = 'MIT'
 
   spec.required_ruby_version = '>= 2.5.0'
