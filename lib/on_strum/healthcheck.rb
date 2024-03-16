@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require_relative 'logs/core'
+require_relative 'healthcheck/core'
 
 # module OnStrum
-#   module GemName
+#   module Healthcheck
 #   end
 # end
