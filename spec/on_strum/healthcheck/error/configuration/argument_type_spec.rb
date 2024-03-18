@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe OnStrum::Healthcheck::Error::ArgumentType do
+RSpec.describe OnStrum::Healthcheck::Error::Configuration::ArgumentType do
   subject(:error_instance) { described_class.new(arg_value, arg_name) }
 
   let(:arg_value) { random_message }
