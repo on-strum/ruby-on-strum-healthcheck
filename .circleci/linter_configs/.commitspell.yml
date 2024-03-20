@@ -20,6 +20,7 @@ words:
   - codeclimate
   - commitspell
   - gemspecs
+  - healthcheck
   - lefthook
   - markdownlint
   - rubocop
