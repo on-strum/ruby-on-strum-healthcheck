@@ -19,6 +19,7 @@ RSpec.configure do |config|
   config.disable_monkey_patching!
 
   config.include OnStrum::Healthcheck::RspecHelper::ContextGenerator
+  config.include OnStrum::Healthcheck::RspecHelper::Configuration
 
   ::Kernel.srand(config.seed)
 end
