@@ -19,8 +19,8 @@ module OnStrum
         endpoint_liveness_status_failure
         endpoint_readiness_status_failure
       ].freeze
-      ENDPOINTS_NAMESPACE = '/'
-      ENDPOINT_STARTUP = '/health'
+      ENDPOINTS_NAMESPACE = '/healthcheck'
+      ENDPOINT_STARTUP = '/startup'
       ENDPOINT_LIVENESS = '/liveness'
       ENDPOINT_READINESS = '/readiness'
       DEFAULT_HTTP_STATUS_SUCCESS = 200
