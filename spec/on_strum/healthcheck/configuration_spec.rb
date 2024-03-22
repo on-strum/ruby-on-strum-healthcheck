@@ -83,6 +83,12 @@ RSpec.describe OnStrum::Healthcheck::Configuration do
         expect(configuration.endpoint_startup).to eq(endpoint_startup)
         expect(configuration.endpoint_liveness).to eq(endpoint_liveness)
         expect(configuration.endpoint_readiness).to eq(endpoint_readiness)
+        expect(configuration.endpoint_startup_status_success).to eq(endpoint_startup_status_success)
+        expect(configuration.endpoint_liveness_status_success).to eq(endpoint_liveness_status_success)
+        expect(configuration.endpoint_readiness_status_success).to eq(endpoint_readiness_status_success)
+        expect(configuration.endpoint_startup_status_failure).to eq(endpoint_startup_status_failure)
+        expect(configuration.endpoint_liveness_status_failure).to eq(endpoint_liveness_status_failure)
+        expect(configuration.endpoint_readiness_status_failure).to eq(endpoint_readiness_status_failure)
         expect(configuration).to be_an_instance_of(described_class)
       end
     end
