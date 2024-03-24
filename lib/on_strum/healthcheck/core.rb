@@ -15,5 +15,7 @@ module OnStrum
 
     require_relative 'version'
     require_relative 'configuration'
+    require_relative 'resolver'
+    require_relative 'rack_middleware'
   end
 end
