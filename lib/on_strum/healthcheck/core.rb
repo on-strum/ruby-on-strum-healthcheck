@@ -10,6 +10,7 @@ module OnStrum
         require_relative 'error/configuration/enpoint_pattern'
         require_relative 'error/configuration/http_status_success'
         require_relative 'error/configuration/http_status_failure'
+        require_relative 'error/configuration/not_configured'
       end
     end
 
