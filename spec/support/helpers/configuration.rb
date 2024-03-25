@@ -16,17 +16,21 @@ module OnStrum
           OnStrum::Healthcheck::Configuration.new(&configuration_block(**configuration_settings))
         end
 
-        # def init_configuration(**args)
-        #   OnStrum::Healthcheck.configure(
-        #     &configuration_block(
-        #       **args
-        #     )
-        #   )
-        # end
+        def init_configuration(**args)
+          OnStrum::Healthcheck.configure(
+            &configuration_block(
+              **args
+            )
+          )
+        end
 
-        # def current_configuration
-        #   OnStrum::Healthcheck.configuration
-        # end
+        def current_configuration
+          OnStrum::Healthcheck.configuration
+        end
+
+        def reset_configuration
+          OnStrum::Healthcheck.reset_configuration!
+        end
       end
     end
   end

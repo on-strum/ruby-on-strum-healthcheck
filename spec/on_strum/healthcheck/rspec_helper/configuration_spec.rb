@@ -34,32 +34,32 @@ RSpec.describe OnStrum::Healthcheck::RspecHelper::Configuration, type: :helper d
     end
   end
 
-  # describe '#init_configuration' do
-  #   subject(:configuration_initializer) do
-  #     init_configuration(
-  #       custom_formatter: custom_formatter,
-  #       detailed_formatter: detailed_formatter
-  #     )
-  #   end
+  describe '#init_configuration' do
+    subject(:configuration_initializer) { init_configuration(endpoints_namespace: endpoints_namespace) }
 
-  #   let(:custom_formatter) { use_formatter(:json) }
-  #   let(:detailed_formatter) { true }
+    let(:endpoints_namespace) { '/some_endpoint' }
 
-  #   it 'initializes configuration instance with random and predefined params' do
-  #     expect(configuration_initializer).to be_an_instance_of(OnStrum::Healthcheck::Configuration)
-  #     expect(configuration_initializer.service_name).not_to be_nil
-  #     expect(configuration_initializer.service_version).not_to be_nil
-  #     expect(configuration_initializer.custom_formatter).to eq(custom_formatter)
-  #     expect(configuration_initializer.detailed_formatter).to eq(detailed_formatter)
-  #   end
-  # end
+    it 'initializes configuration instance with random and predefined params' do
+      expect(configuration_initializer).to be_an_instance_of(OnStrum::Healthcheck::Configuration)
+      expect(configuration_initializer.endpoints_namespace).to eq(endpoints_namespace)
+    end
+  end
 
-  # describe '#current_configuration' do
-  #   subject(:current_configuration_instance) { current_configuration }
+  describe '#current_configuration' do
+    subject(:current_configuration_instance) { current_configuration }
 
-  #   it do
-  #     expect(OnStrum::Healthcheck).to receive(:configuration)
-  #     current_configuration_instance
-  #   end
-  # end
+    it do
+      expect(OnStrum::Healthcheck).to receive(:configuration)
+      current_configuration_instance
+    end
+  end
+
+  describe '#reset_configuration' do
+    subject(:reset_current_configuration) { reset_configuration }
+
+    it do
+      expect(OnStrum::Healthcheck).to receive(:reset_configuration!)
+      reset_current_configuration
+    end
+  end
 end

@@ -33,6 +33,7 @@ detectors:
       - OnStrum::Healthcheck::Configuration#validator_http_status_failure
       - OnStrum::Healthcheck::Configuration#validator_http_status_success
       - OnStrum::Healthcheck::Configuration#validator_services_callable
+      - OnStrum::Healthcheck::Resolver#configuration
 
 exclude_paths:
   - spec/support/helpers
