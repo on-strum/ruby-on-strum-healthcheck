@@ -19,7 +19,10 @@ Gem::Specification.new do |spec|
   spec.files = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.require_paths = %w[lib]
 
+  spec.add_runtime_dependency 'rack', '>= 2.0.1'
+
   spec.add_development_dependency 'ffaker', ffaker_version
+  spec.add_development_dependency 'json_matchers', '~> 0.11.1'
   spec.add_development_dependency 'rake', '~> 13.1'
   spec.add_development_dependency 'rspec', '~> 3.13'
 end
