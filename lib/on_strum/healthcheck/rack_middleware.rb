@@ -3,7 +3,7 @@
 module OnStrum
   module Healthcheck
     class RackMiddleware
-      def initialize(app, resolver = OnStrum::Healthcheck::Resolver, *_args)
+      def initialize(app, resolver = OnStrum::Healthcheck::Resolver, *)
         @app = app
         @resolver = resolver
       end
