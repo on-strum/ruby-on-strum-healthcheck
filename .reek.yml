@@ -4,5 +4,36 @@ detectors:
   IrresponsibleModule:
     enabled: false
 
+  ControlParameter:
+    exclude:
+      - OnStrum::Healthcheck::Configuration#raise_unless
+      - OnStrum::Healthcheck::Configuration#validator_argument_type
+
+  LongParameterList:
+    exclude:
+      - OnStrum::Healthcheck::Configuration#raise_unless
+
+  ManualDispatch:
+    exclude:
+      - OnStrum::Healthcheck::Configuration#validator_services_callable
+
+  TooManyConstants:
+    exclude:
+      - OnStrum::Healthcheck::Configuration
+
+  TooManyStatements:
+    exclude:
+      - OnStrum::Healthcheck::Configuration#validate_attribute
+
+  UtilityFunction:
+    exclude:
+      - OnStrum::Healthcheck::Configuration#build_configuration_settings
+      - OnStrum::Healthcheck::Configuration#validator_argument_type
+      - OnStrum::Healthcheck::Configuration#validator_endpoint
+      - OnStrum::Healthcheck::Configuration#validator_http_status_failure
+      - OnStrum::Healthcheck::Configuration#validator_http_status_success
+      - OnStrum::Healthcheck::Configuration#validator_services_callable
+      - OnStrum::Healthcheck::Resolver#configuration
+
 exclude_paths:
   - spec/support/helpers

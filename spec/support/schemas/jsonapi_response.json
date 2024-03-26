@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "http://example.com/example.json",
+  "title": "Root Schema",
+  "type": "object",
+  "default": {},
+  "required": [
+      "data"
+  ],
+  "properties": {
+      "data": {
+          "title": "The data Schema",
+          "type": "object",
+          "default": {},
+          "required": [
+              "id",
+              "type",
+              "attributes"
+          ],
+          "properties": {
+              "id": {
+                  "title": "The id Schema",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                      "ea266931-feb6-4b19-9308-ec29f18f1c02"
+                  ]
+              },
+              "type": {
+                  "title": "The type Schema",
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                      "application-healthcheck"
+                  ]
+              },
+              "attributes": {
+                  "title": "The attributes Schema",
+                  "type": "object",
+                  "default": {},
+                  "properties": {
+                      "yettacoletta": {
+                          "title": "The yettacoletta Schema",
+                          "type": "boolean",
+                          "default": false,
+                          "examples": [
+                              true
+                          ]
+                      },
+                      "rubenwikstrm": {
+                          "title": "The rubenwikstrm Schema",
+                          "type": "boolean",
+                          "default": false,
+                          "examples": [
+                              false
+                          ]
+                      }
+                  },
+                  "examples": [{
+                      "yettacoletta": true,
+                      "rubenwikstrm": false
+                  }]
+              }
+          },
+          "examples": [{
+              "id": "ea266931-feb6-4b19-9308-ec29f18f1c02",
+              "type": "application-healthcheck",
+              "attributes": {
+                  "yettacoletta": true,
+                  "rubenwikstrm": false
+              }
+          }]
+      }
+  },
+  "examples": [{
+      "data": {
+          "id": "ea266931-feb6-4b19-9308-ec29f18f1c02",
+          "type": "application-healthcheck",
+          "attributes": {
+              "yettacoletta": true,
+              "rubenwikstrm": false
+          }
+      }
+  }]
+}

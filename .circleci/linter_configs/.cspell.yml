@@ -19,11 +19,13 @@ languageSettings:
       - MarkdownCodeBlock
 
 words:
-  - Commiting
-  - Nazarov
   - Serhiy
-  - Vladislav
-  - Trotsenko
+  - Nazarov
+  - commiting
   - codebases
   - gemspecs
-  - onStrum
+  - onstrum
+  - healthcheck
+  - healthchecks
+  - roda
+  - hanami
