@@ -30,15 +30,11 @@ Simple configurable healthcheck rack middleware. This middleware allows you to e
 
 ## Features
 
-- Ability to use built-in default configuration
-- Ability to configure services for startup probe
-- Ability to configure services for liveness probe
-- Ability to configure services for readiness probe
-- Ability to configure root endpoints namespace
-- Ability to configure startup probe endpoint
-- Ability to configure liveness probe endpoint
-- Ability to configure readiness probe endpoint
-- Ability to configure successful/failure response statuses
+- Built-in default configuration
+- Configurable services for startup/liveness/readiness probes
+- Configurable root endpoints namespace
+- Configurable startup/liveness/readiness probes endpoints
+- Configurable successful/failure response statuses
 
 ## Requirements
 
