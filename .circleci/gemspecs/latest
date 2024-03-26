@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = OnStrum::Healthcheck::VERSION
   spec.authors       = ['Vladislav Trotsenko']
   spec.email         = %w[admin@on-strum.org]
-  spec.summary       = %(Simple configurable rack middleware)
-  spec.description   = %(Simple configurable rack middleware.)
+  spec.summary       = %(Simple configurable application healthcheck rack middleware)
+  spec.description   = %(Simple configurable application healthcheck rack middleware.)
   spec.homepage      = 'https://github.com/on-strum/ruby-on-strum-healthcheck'
   spec.license       = 'MIT'
 
@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 13.1'
   spec.add_development_dependency 'reek', '~> 6.3'
   spec.add_development_dependency 'rspec', '~> 3.13'
-  spec.add_development_dependency 'rubocop', '~> 1.61'
+  spec.add_development_dependency 'rubocop', '~> 1.62', '>= 1.62.1'
   spec.add_development_dependency 'rubocop-performance', '~> 1.20', '>= 1.20.2'
   spec.add_development_dependency 'rubocop-rspec', '~> 2.27', '>= 2.27.1'
   spec.add_development_dependency 'simplecov', '~> 0.22.0'

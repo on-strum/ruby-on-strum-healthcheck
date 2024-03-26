@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = OnStrum::Healthcheck::VERSION
   spec.authors       = ['Vladislav Trotsenko']
   spec.email         = %w[admin@on-strum.org]
-  spec.summary       = %(Simple configurable rack middleware)
-  spec.description   = %(Simple configurable rack middleware.)
+  spec.summary       = %(Simple configurable application healthcheck rack middleware)
+  spec.description   = %(Simple configurable application healthcheck rack middleware.)
   spec.homepage      = 'https://github.com/on-strum/ruby-on-strum-healthcheck'
   spec.license       = 'MIT'
 
