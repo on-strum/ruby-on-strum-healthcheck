@@ -3,8 +3,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/b4dc21883d489d67fbef/maintainability)](https://codeclimate.com/github/on-strum/ruby-on-strum-healthcheck/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b4dc21883d489d67fbef/test_coverage)](https://codeclimate.com/github/on-strum/ruby-on-strum-healthcheck/test_coverage)
 [![CircleCI](https://circleci.com/gh/on-strum/ruby-on-strum-healthcheck/tree/master.svg?style=svg)](https://circleci.com/gh/on-strum/ruby-on-strum-healthcheck/tree/master)
-[![Gem Version](https://badge.fury.io/rb/ruby_healthcheck.svg)](https://badge.fury.io/rb/ruby_healthcheck)
-[![Downloads](https://img.shields.io/gem/dt/ruby_healthcheck.svg?colorA=004d99&colorB=0073e6)](https://rubygems.org/gems/ruby_healthcheck)
+[![Gem Version](https://badge.fury.io/rb/on_strum-healthcheck.svg)](https://badge.fury.io/rb/on_strum-healthcheck)
+[![Downloads](https://img.shields.io/gem/dt/on_strum-healthcheck.svg?colorA=004d99&colorB=0073e6)](https://rubygems.org/gems/on_strum-healthcheck)
 [![GitHub](https://img.shields.io/github/license/on-strum/ruby-on-strum-healthcheck)](LICENSE.txt)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
