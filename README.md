@@ -1,4 +1,4 @@
-# ![OnStrum::Healthcheck - Simple configurable healthcheck rack middleware](https://repository-images.githubusercontent.com/769335579/9094eefe-bfc8-483d-9a65-e406d1eb92c6)
+# ![OnStrum::Healthcheck - Simple configurable application healthcheck rack middleware](https://repository-images.githubusercontent.com/769335579/9094eefe-bfc8-483d-9a65-e406d1eb92c6)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/b4dc21883d489d67fbef/maintainability)](https://codeclimate.com/github/on-strum/ruby-on-strum-healthcheck/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b4dc21883d489d67fbef/test_coverage)](https://codeclimate.com/github/on-strum/ruby-on-strum-healthcheck/test_coverage)
@@ -8,7 +8,7 @@
 [![GitHub](https://img.shields.io/github/license/on-strum/ruby-on-strum-healthcheck)](LICENSE.txt)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
-Simple configurable healthcheck rack middleware. This middleware allows you to embed healthcheck endpoints into your rack based application to perform healthcheck probes. Make your application compatible with [Docker](https://docs.docker.com/reference/dockerfile/#healthcheck)/[Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-a-liveness-http-request) healthchecks in a seconds.
+Simple configurable application healthcheck rack middleware. This middleware allows you to embed healthcheck endpoints into your rack based application to perform healthcheck probes. Make your application compatible with [Docker](https://docs.docker.com/reference/dockerfile/#healthcheck)/[Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-a-liveness-http-request) healthchecks in a seconds.
 
 ## Table of Contents
 
