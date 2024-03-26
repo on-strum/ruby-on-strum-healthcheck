@@ -19,6 +19,7 @@ words:
   - codebases
   - codeclimate
   - commitspell
+  - creds
   - gemspecs
   - healthcheck
   - lefthook
