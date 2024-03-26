@@ -17,10 +17,12 @@ Simple configurable application healthcheck rack middleware. This middleware all
 - [Installation](#installation)
 - [Configuring](#configuring)
 - [Usage](#usage)
-  - [Rack](#rack)
-  - [Roda](#roda)
-  - [Hanami](#hanami)
-  - [Rails](#rails)
+  - [Integration](#integration)
+    - [Rack](#rack)
+    - [Roda](#roda)
+    - [Hanami](#hanami)
+    - [Rails](#rails)
+  - [Healthcheck endpoint response](#healthcheck-endpoint-response)
 - [Contributing](#contributing)
 - [License](#license)
 - [Code of Conduct](#code-of-conduct)
@@ -143,12 +145,13 @@ end
 
 ## Usage
 
+### Integration
+
 Please note, to start using this middleware you should configure `OnStrum::Healthcheck` before and then you should to add `OnStrum::Healthcheck::RackMiddleware` on the top of middlewares list.
 
-### Rack
+#### Rack
 
 ```ruby
-require 'rack'
 require 'on_strum/healthcheck'
 
 OnStrum::Healthcheck.configure
@@ -159,10 +162,9 @@ RackCascade = Rack::Builder.app do
 end
 ```
 
-### Roda
+#### Roda
 
 ```ruby
-require 'roda'
 require 'on_strum/healthcheck'
 
 OnStrum::Healthcheck.configure
@@ -172,7 +174,7 @@ class YourApplication < Roda
 end
 ```
 
-### Hanami
+#### Hanami
 
 ```ruby
 # config/initializers/on_strum_healthcheck.rb
@@ -188,7 +190,7 @@ Hanami.configure do
 end
 ```
 
-### Rails
+#### Rails
 
 ```ruby
 # config/initializers/on_strum_healthcheck.rb
@@ -199,7 +201,27 @@ OnStrum::Healthcheck.configure
 
 # config/application.rb
 
-config.middleware.use OnStrum::Healthcheck::RackMiddleware
+class Application < Rails::Application
+  config.middleware.use OnStrum::Healthcheck::RackMiddleware
+end
+```
+
+### Healthcheck endpoint response
+
+Determining if the HTTP response status is based on the general result of service checks (when all are successful the status is successful, at least one failure - the status is failure). Each healthcheck endpoint returns JSON with a structure like in the example below:
+
+```json
+{
+  "data": {
+    "id": "a09efd18-e09f-4207-9a43-b4bf89f76b47",
+    "type": "application-healthcheck",
+    "attributes": {
+        "postges": true,
+        "redis": true,
+        "rebbit": true
+    }
+  }
+}
 ```
 
 ## Contributing
