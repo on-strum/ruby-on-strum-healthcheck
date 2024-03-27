@@ -208,7 +208,7 @@ end
 
 ### Healthcheck endpoint response
 
-Determining if the HTTP response status is based on the general result of service checks (when all are successful the status is successful, at least one failure - the status is failure). Each healthcheck endpoint returns JSON with a structure like in the example below:
+Each healthcheck endpoint returns proper HTTP status and body. Determining the response status is based on the general result of service checks (when all are successful the status is successful, at least one failure - the status is failure). The response body represented as JSON document with a structure like in the example below:
 
 ```json
 {
