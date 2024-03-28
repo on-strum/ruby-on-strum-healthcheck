@@ -155,7 +155,7 @@ Please note, to start using this middleware you should configure `OnStrum::Healt
 require 'on_strum/healthcheck'
 
 # Configuring OnStrum::Healthcheck with default settings
-OnStrum::Healthcheck.configure {}
+OnStrum::Healthcheck.configure
 
 Rack::Builder.app do
   use OnStrum::Healthcheck::RackMiddleware
@@ -169,7 +169,7 @@ end
 require 'on_strum/healthcheck'
 
 # Configuring OnStrum::Healthcheck with default settings
-OnStrum::Healthcheck.configure {}
+OnStrum::Healthcheck.configure
 
 class YourApplication < Roda
   use OnStrum::Healthcheck::RackMiddleware
@@ -184,7 +184,7 @@ end
 require 'on_strum/healthcheck'
 
 # Configuring OnStrum::Healthcheck with default settings
-OnStrum::Healthcheck.configure {}
+OnStrum::Healthcheck.configure
 ```
 
 ```ruby
@@ -203,7 +203,7 @@ end
 require 'on_strum/healthcheck'
 
 # Configuring OnStrum::Healthcheck with default settings
-OnStrum::Healthcheck.configure {}
+OnStrum::Healthcheck.configure
 ```
 
 ```ruby
