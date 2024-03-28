@@ -23,8 +23,27 @@ RSpec.describe OnStrum::Healthcheck do
     let(:config_block) { nil }
 
     context 'without block' do
-      it { expect(configuration).to be_nil }
-      it { expect { configuration }.not_to change(described_class, :configuration) }
+      it 'sets default attributes into configuration instance' do
+        expect { configuration }
+          .to change(described_class, :configuration)
+          .from(nil)
+          .to(be_instance_of(OnStrum::Healthcheck::Configuration))
+        expect(configuration).to be_an_instance_of(OnStrum::Healthcheck::Configuration)
+        expect(configuration.services).to eq({})
+        expect(configuration.services_startup).to eq([])
+        expect(configuration.services_liveness).to eq([])
+        expect(configuration.services_readiness).to eq([])
+        expect(configuration.endpoints_namespace).to eq(OnStrum::Healthcheck::Configuration::ENDPOINTS_NAMESPACE)
+        expect(configuration.endpoint_startup).to eq(OnStrum::Healthcheck::Configuration::ENDPOINT_STARTUP)
+        expect(configuration.endpoint_liveness).to eq(OnStrum::Healthcheck::Configuration::ENDPOINT_LIVENESS)
+        expect(configuration.endpoint_readiness).to eq(OnStrum::Healthcheck::Configuration::ENDPOINT_READINESS)
+        expect(configuration.endpoint_startup_status_success).to eq(OnStrum::Healthcheck::Configuration::DEFAULT_HTTP_STATUS_SUCCESS)
+        expect(configuration.endpoint_liveness_status_success).to eq(OnStrum::Healthcheck::Configuration::DEFAULT_HTTP_STATUS_SUCCESS)
+        expect(configuration.endpoint_readiness_status_success).to eq(OnStrum::Healthcheck::Configuration::DEFAULT_HTTP_STATUS_SUCCESS)
+        expect(configuration.endpoint_startup_status_failure).to eq(OnStrum::Healthcheck::Configuration::DEFAULT_HTTP_STATUS_FAILURE)
+        expect(configuration.endpoint_liveness_status_failure).to eq(OnStrum::Healthcheck::Configuration::DEFAULT_HTTP_STATUS_FAILURE)
+        expect(configuration.endpoint_readiness_status_failure).to eq(OnStrum::Healthcheck::Configuration::DEFAULT_HTTP_STATUS_FAILURE)
+      end
     end
 
     context 'with block' do
