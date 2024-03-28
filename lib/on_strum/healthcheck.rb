@@ -14,6 +14,8 @@ module OnStrum
       end
 
       def configure(&block)
+        return configuration {} unless block # rubocop:disable Lint/EmptyBlock
+
         configuration(&block)
       end
 
