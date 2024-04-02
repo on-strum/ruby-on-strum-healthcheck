@@ -191,7 +191,7 @@ OnStrum::Healthcheck.configure
 # config/environment.rb
 
 Hanami.configure do
-  middleware.use MyRackMiddleware
+  middleware.use OnStrum::Healthcheck::RackMiddleware
 end
 ```
 
