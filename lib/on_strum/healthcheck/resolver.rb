@@ -9,7 +9,6 @@ module OnStrum
 
       PROBE_ENDPOINTS = %i[endpoint_startup endpoint_liveness endpoint_readiness].freeze
       CONTENT_TYPE = { 'Content-Type' => 'application/json' }.freeze
-      JSONAPI_RESPONSE_TYPE = 'application-healthcheck'
       ROOT_NAMESPACE = '/'
 
       def self.call(rack_env)
@@ -75,7 +74,7 @@ module OnStrum
         {
           data: {
             id: ::SecureRandom.uuid,
-            type: OnStrum::Healthcheck::Resolver::JSONAPI_RESPONSE_TYPE,
+            type: "application-#{probe_name}-healthcheck",
             attributes: probe_result
           }
         }.to_json

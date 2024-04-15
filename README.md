@@ -222,7 +222,7 @@ Each healthcheck endpoint returns proper HTTP status and body. Determining the r
 {
   "data": {
     "id": "a09efd18-e09f-4207-9a43-b4bf89f76b47",
-    "type": "application-healthcheck",
+    "type": "application-startup-healthcheck",
     "attributes": {
         "postgres": true,
         "redis": true,
