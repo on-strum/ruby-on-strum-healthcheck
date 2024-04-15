@@ -77,7 +77,7 @@ OnStrum::Healthcheck.configure do |config|
   # and return boolean.
   # It is equal to empty hash by default.
   config.services = {
-    postges: -> { true },
+    postgres: -> { true },
     redis: -> { true },
     rabbit: -> { false }
   }
@@ -86,7 +86,7 @@ OnStrum::Healthcheck.configure do |config|
   # during running startup probe. As array items must be used an
   # existing keys, defined in config.services.
   # It is equal to empty array by default.
-  config.services_startup = %i[postges]
+  config.services_startup = %i[postgres]
 
   # Optional parameter. The list of services that will be checked
   # during running liveness probe. As array items must be used an
@@ -98,7 +98,7 @@ OnStrum::Healthcheck.configure do |config|
   # during running liveness probe. As array items must be used an
   # existing keys, defined in config.services.
   # It is equal to empty array by default.
-  config.services_readiness = %i[postges redis rabbit]
+  config.services_readiness = %i[postgres redis rabbit]
 
   # Optional parameter. The name of middleware's root
   # endpoints namespace. Use '/' if you want to use root
@@ -191,7 +191,7 @@ OnStrum::Healthcheck.configure
 # config/environment.rb
 
 Hanami.configure do
-  middleware.use MyRackMiddleware
+  middleware.use OnStrum::Healthcheck::RackMiddleware
 end
 ```
 
@@ -222,11 +222,11 @@ Each healthcheck endpoint returns proper HTTP status and body. Determining the r
 {
   "data": {
     "id": "a09efd18-e09f-4207-9a43-b4bf89f76b47",
-    "type": "application-healthcheck",
+    "type": "application-startup-healthcheck",
     "attributes": {
-        "postges": true,
+        "postgres": true,
         "redis": true,
-        "rebbit": true
+        "rabbit": true
     }
   }
 }

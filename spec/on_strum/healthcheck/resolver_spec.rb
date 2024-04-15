@@ -4,7 +4,6 @@ RSpec.describe OnStrum::Healthcheck::Resolver do
   describe 'defined constants' do
     it { expect(described_class).to be_const_defined(:PROBE_ENDPOINTS) }
     it { expect(described_class).to be_const_defined(:CONTENT_TYPE) }
-    it { expect(described_class).to be_const_defined(:JSONAPI_RESPONSE_TYPE) }
     it { expect(described_class).to be_const_defined(:ROOT_NAMESPACE) }
   end
 
@@ -41,11 +40,12 @@ RSpec.describe OnStrum::Healthcheck::Resolver do
         end
 
         it 'returns rack middleware response' do
-          response_status, _content_type, _response = resolver
+          response_status, _content_type, response_body = resolver
 
           expect(response_status).to eq(
             current_configuration.public_send(:"endpoint_#{probe_name}_status_success")
           )
+          expect(response_body.first).to include("application-#{probe_name}-healthcheck")
         end
       end
 
